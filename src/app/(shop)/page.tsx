@@ -30,7 +30,7 @@ interface Props {
 
 export default function Home({ searchParams }: Props) {
   const [selectedCategoryId, setSelectedCategoryId] = useState<string | null>(
-    null
+    "6ceaabb8-fac7-4c89-8509-84ba0ca89db1"
   );
   const [products, setProducts] = useState<Product[]>([]);
   const [currentPage, setCurrentPage] = useState(1);
@@ -65,7 +65,7 @@ export default function Home({ searchParams }: Props) {
 
         <div className="flex gap-3 flex-wrap p-4">
           <button
-            className="btn-categories font-bold"
+            className="btn-categories"
             onClick={() => handleCategoryChange(null)}
           >
             Mostrar Todas
