@@ -180,7 +180,7 @@ export default function Home({ searchParams }: Props) {
           </Link>
         ))}
       </div>
-      <Pagination totalPages={totalPages} />
+
     </>
   );
 }
