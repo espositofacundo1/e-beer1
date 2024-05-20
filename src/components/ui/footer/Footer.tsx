@@ -1,9 +1,10 @@
 import Link from "next/link";
 import React from "react";
-import { CgCoffee } from "react-icons/cg";
+
 import { titleFont } from "@/config/fonts";
 import { FaMapMarkerAlt } from "react-icons/fa";
 import { BsWhatsapp } from "react-icons/bs";
+import { CiBeerMugFull } from "react-icons/ci";
 
 export default function Footer() {
   return (
@@ -12,10 +13,10 @@ export default function Footer() {
         <span
           className={`${titleFont.className} antialiased font-bold flex items-center`}
         >
-          <CgCoffee className="w-6 h-6 mr-1" />
+          <CiBeerMugFull className="w-6 h-6 mr-1" />
         </span>
         <span className="mr-1">|</span>
-        <span className="bg-green-200 p-1 rounded">E-coffee</span>
+        <span className="bg-green-200 p-1 rounded">E-beer</span>
       </Link>
       <div className="flex justify-center pt-3 ">
       <span className="px-2">© {new Date().getFullYear()} . All rights reserved.  |  </span>
