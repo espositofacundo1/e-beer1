@@ -6,6 +6,7 @@ import BanerSlideShowHome from "@/components/product/slideshow/BanerSlideshow";
 
 import Image from "next/image";
 import Link from "next/link";
+import Pagination from "@/components/ui/pagination/Pagination";
 
 interface Product {
   id: string;
@@ -29,7 +30,7 @@ interface Props {
 
 export default function Home({ searchParams }: Props) {
   const [selectedCategoryId, setSelectedCategoryId] = useState<string | null>(
-    "6ceaabb8-fac7-4c89-8509-84ba0ca89db1"
+    null
   );
   const [products, setProducts] = useState<Product[]>([]);
   const [currentPage, setCurrentPage] = useState(1);
@@ -63,7 +64,12 @@ export default function Home({ searchParams }: Props) {
         </div>
 
         <div className="flex gap-3 flex-wrap p-4">
-         
+          <button
+            className="btn-categories font-bold"
+            onClick={() => handleCategoryChange(null)}
+          >
+            Mostrar Todas
+          </button>
           <button
             className="btn-categories"
             onClick={() =>
@@ -174,6 +180,7 @@ export default function Home({ searchParams }: Props) {
           </Link>
         ))}
       </div>
+      <Pagination totalPages={totalPages} />
     </>
   );
 }
